@@ -1,0 +1,50 @@
+.featured {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 1;
+}
+
+.featuredItem {
+    width: 100%;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    height: 250px;
+    cursor: pointer;
+}
+.featuredItem.large {
+    flex-basis: calc(50% - 10px);
+}
+
+.featuredItem.small {
+    flex-basis: calc(33% - 10px);
+    height: auto;
+}
+
+.featuredImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.featuredTitle {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+.featuredTitle h1 {
+    font-size: large;
+    text-shadow: gray 2px 2px;
+}
+.featuredTitle h2 {
+    font-size: small;
+    text-shadow: gray 2px 2px;
+}
+
+.featuredItem img {
+    height: 100%;
+}
