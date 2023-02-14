@@ -18,7 +18,7 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false)
 
-  const {data, loading, error} = useFetch(`/api/hotels/find/${id}`);
+  const {data, loading, error} = useFetch(`${process.env.REACT_APP_URL}/hotels/find/${id}`);
 
   // context api to pass location dates and options to other pages
   const {dates, options} = useContext(SearchContext);

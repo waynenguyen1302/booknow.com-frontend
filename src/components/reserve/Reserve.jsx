@@ -8,7 +8,7 @@ import useFetch from '../../hooks/useFetch'
 import './reserve.css'
 
 const Reserve = ({setOpen, hotelId}) => {
-    const {data, loading, error} = useFetch(`/api/hotels/room/${hotelId}`);
+    const {data, loading, error} = useFetch(`${process.env.REACT_APP_URL}/hotels/room/${hotelId}`);
     const [selectedRooms, setSelectedRooms] = useState([]);
     const {dates} = useContext(SearchContext)
 
@@ -54,7 +54,7 @@ const Reserve = ({setOpen, hotelId}) => {
         try {
             await Promise.all(
                 selectedRooms.map((roomId) => {
-                  const res = axios.put(`/api/rooms/availability/${roomId}`, {
+                  const res = axios.put(`${process.env.REACT_APP_URL}/rooms/availability/${roomId}`, {
                     dates: allDates,
                   });
                   return res.data;

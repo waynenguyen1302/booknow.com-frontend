@@ -6,7 +6,7 @@ import './propertyList.css'
 const PropertyList = () => {
 
     const { data, loading, error, reFetch } = useFetch(
-        "/api/hotels/countByType"
+        `${process.env.REACT_APP_URL}/hotels/countByType`
       );
 
     const images = [
