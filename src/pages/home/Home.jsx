@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import { lazy } from 'react'
 // import Featured from '../../components/featured/Featured'
 // import FeaturedProperties from '../../components/featuredProperties/FeaturedProperties'
 import Footer from '../../components/footer/Footer'
@@ -7,10 +8,10 @@ import Header from '../../components/header/Header'
 import Navbar from '../../components/navbar/Navbar'
 // import PropertyList from '../../components/propertyList/PropertyList'
 import './home.css'
-const Featured = React.lazy(() => import('../../components/featured/Featured'))
-const PropertyList = React.lazy(() => import('../../components/propertyList/PropertyList'));
-const MailList = React.lazy(() => import('../../components/mailList/MailList'));
-const FeaturedProperties = React.lazy(() => import('../../components/featuredProperties/FeaturedProperties'));
+const Featured = lazy(() => import('../../components/featured/Featured'))
+const PropertyList = lazy(() => import('../../components/propertyList/PropertyList'));
+const MailList = lazy(() => import('../../components/mailList/MailList'));
+const FeaturedProperties = lazy(() => import('../../components/featuredProperties/FeaturedProperties'));
 
 const Home = () => {
   return (
